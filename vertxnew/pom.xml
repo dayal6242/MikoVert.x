@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.convert</groupId>
+    <artifactId>vertxnew</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>vertx</name>
+    <description>Demo project for Spring Boot</description>
+
+    <dependencies>
+        <!-- Vert.x Core -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>4.4.2</version>
+        </dependency>
+
+        <!-- Vert.x Web -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
+            <version>4.4.2</version>
+        </dependency>
+
+        <!-- Vert.x Web Client -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web-client</artifactId>
+            <version>4.4.2</version>
+        </dependency>
+
+        <!-- Apache Commons Text for LevenshteinDistance -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+
+        <!-- Testing (JUnit) -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-unit</artifactId>
+            <version>4.4.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+    <plugins>
+		
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <archive>
+                    <manifestEntries>
+                        <Main-Class>com.example.verte.MainVerticle</Main-Class>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+        
+    </plugins>
+    
+</build>
+</project>
