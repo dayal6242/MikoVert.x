@@ -13,9 +13,9 @@ public class MainVerticle extends AbstractVerticle {
         Router router = Router.router(vertx);
         router.route().handler(BodyHandler.create());
         System.out.println("start");
-        // Add your routes here
+        
+ 
         router.post("/api/search").handler(new SearchHandler());
-
         vertx.createHttpServer()
             .requestHandler(router)
             .listen(8083)

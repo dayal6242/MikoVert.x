@@ -21,7 +21,7 @@ public class SearchHandler implements Handler<RoutingContext> {
     public void handle(RoutingContext context) {
         JsonObject body = context.getBodyAsJson();
 
-        // Debugging: Print received values
+       
         System.out.println("Received request body: " + body);
 
         if (body == null || body.isEmpty()) {
@@ -34,7 +34,7 @@ public class SearchHandler implements Handler<RoutingContext> {
         String searchTerm = body.getString("search_term");
         List<String> textList = body.getJsonArray("text").getList();
 
-        // Print extracted values
+       
         System.out.println("Search Term: " + searchTerm);
         System.out.println("Text Array: " + textList);
 

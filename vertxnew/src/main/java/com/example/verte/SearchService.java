@@ -16,11 +16,11 @@ public class SearchService {
         double threshold = 0.8;
 
         return textList.stream()
-                .flatMap(text -> List.of(text.split("\\s+")).stream()) // Split text into words
-                .map(word -> word.toLowerCase()) // Convert to lower case
-                .distinct() // Remove duplicates
-                .filter(word -> distance.apply(searchTerm.toLowerCase(), word) >= threshold) // Filter based on similarity
-                .collect(Collectors.toList()); // Collect and return the matches
+                .flatMap(text -> List.of(text.split("\\s+")).stream()) 
+                .map(word -> word.toLowerCase()) 
+                .distinct() 
+                .filter(word -> distance.apply(searchTerm.toLowerCase(), word) >= threshold) 
+                .collect(Collectors.toList()); 
     }
 }
 
