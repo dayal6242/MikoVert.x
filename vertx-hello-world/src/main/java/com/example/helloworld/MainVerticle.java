@@ -11,7 +11,7 @@ public class MainVerticle extends AbstractVerticle {
     public void start() {
         Router router = Router.router(vertx);
 
-        // Handle HTTP GET request to "/hello"
+       
         router.route("/hello").handler(ctx -> {
             ctx.response()
                .putHeader("content-type", "text/plain")
